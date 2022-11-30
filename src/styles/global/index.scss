@@ -6,10 +6,8 @@
   --yellow: #FFEE00;
   --orange: #FCB500;
   --red: #c84f4f;
-  --violet: #6461e2;
   --menu-bg-fixed: #111111;
   --menu-bg-mobile: #111111;
-  --loader-color: #fff;
 }
 
 html {
@@ -17,6 +15,7 @@ html {
 }
 
 .container {
+  position: relative;
   margin-inline-start: auto;
   margin-inline-end: auto;
   max-width: 1320px;
@@ -30,4 +29,10 @@ html {
 
 body {
   font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+
+img {
+  max-width: 100%;
 }

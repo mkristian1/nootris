@@ -1,9 +1,10 @@
+import Mainpage from "../components/MainPage";
 import Layout from "../layout";
 
 const MainPage = () => {
     return(
         <Layout>
-            Pages
+            <Mainpage />
         </Layout>
     )
 }

@@ -5,6 +5,7 @@
   --white: #ffffff;
   --yellow: #FFEE00;
   --orange: #FCB500;
+  --gray: #ADADAD;
   --red: #c84f4f;
   --menu-bg-fixed: #111111;
   --menu-bg-mobile: #111111;
@@ -32,7 +33,10 @@ body {
   font-size: 18px;
 }
 
-
 img {
   max-width: 100%;
+}
+
+.text-orange {
+  color: var(--orange);
 }

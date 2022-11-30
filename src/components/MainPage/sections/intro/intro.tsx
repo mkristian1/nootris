@@ -15,7 +15,7 @@ const SectionIntro: FC = () => {
           <h2 className={styles["intro__sub-title"]}>NOOTRIS ПОМОГАЕТ</h2>
           <p>Вашему организму во вемя рпандемии и сезонных простуд</p>
         </div>
-      <img className={styles["intro__vitamin"]} src={vitamin} alt="Vitamin" />
+        <img className={styles["intro__vitamin"]} src={vitamin} alt="Vitamin" />
       </div>
     </section>
   );

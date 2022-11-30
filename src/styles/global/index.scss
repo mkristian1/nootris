@@ -1,0 +1,33 @@
+@import "../mixins/index.scss";
+
+:root {
+  --black: #111111;
+  --white: #ffffff;
+  --yellow: #FFEE00;
+  --orange: #FCB500;
+  --red: #c84f4f;
+  --violet: #6461e2;
+  --menu-bg-fixed: #111111;
+  --menu-bg-mobile: #111111;
+  --loader-color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-width: 1320px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  @include xl {
+    max-width: initial;
+    width: 100%;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}

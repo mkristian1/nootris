@@ -1,0 +1,131 @@
+@import "../../styles/mixins/index.scss";
+
+.header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding:20px 0;
+  transition: background-color 0.3s;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--black);
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    transition: width 3s;
+  }
+  &_fixed {
+    background-color: var(--menu-bg-fixed);
+    .menu a {
+      color: var(--white);
+      font-size: 18px;
+    }
+    .header__logo {
+      width: 60px;
+    }
+  }
+  &__phone {
+    font-size: 18px;
+    color: var(--white);
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 45px;
+  &__link {
+    color: var(--white);
+    font-size: 18px;
+    transition: 0.3s;
+    &:hover {
+      color: var(--yellow);
+    }
+  }
+  @include xl {
+    gap: 20px;
+  }
+  @include lg {
+    flex-direction: column;
+    position: absolute;
+    gap: 16px;
+    top: 34px;
+    display: none;
+    z-index: 1000;
+    &__open {
+      display: flex;
+      width: 100%;
+      left: 0;
+      padding-inline-start: 20px;
+      background-color: var(--menu-bg-mobile);
+      height: 100vh;
+      padding-block-start: 20px;
+      padding-block-end: 20px;
+      overflow: auto;
+    }
+  }
+}
+
+.burger {
+  &__btn {
+    cursor: pointer;
+    display: none;
+    background: none;
+    @include lg {
+      display: block;
+      height: 24px;
+      width: 30px;
+    }
+  }
+  &__icon {
+    display: block;
+    background-color: var(--white);
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+    position: absolute;
+
+    &:before {
+      @extend .burger__icon;
+      content: "";
+      margin-top: -8px;
+    }
+    &::after {
+      @extend .burger__icon;
+      content: "";
+      margin-top: 8px;
+    }
+    &_open {
+      background: transparent;
+      &::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+      }
+      &::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+      }
+    }
+  }
+}
+
+
+.cart {
+  position: relative;
+  &__count {
+    position: absolute;
+    bottom: -4px;
+    right: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    font-size: 12px;
+  }
+}

@@ -20,7 +20,7 @@ const Header = () => {
               <img className={styles.header__logo} src={logo} alt="Logo" />
             </a>
           </div>
-          <nav>
+          <nav className={styles['header__nav']}>
             <button onClick={handleToogleMenu} className={styles.burger__btn}>
               <div
                 className={cn(styles.burger__icon, {

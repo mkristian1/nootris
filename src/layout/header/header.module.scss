@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   position: fixed;
-  padding:20px 0;
+  padding: 20px 0;
   transition: background-color 0.3s;
   width: 100%;
   z-index: 100;
@@ -17,25 +17,26 @@
   &__logo {
     transition: width 3s;
   }
-  &_fixed {
-    background-color: var(--menu-bg-fixed);
-    .menu a {
-      color: var(--white);
-      font-size: 18px;
-    }
-    .header__logo {
-      width: 60px;
-    }
-  }
   &__phone {
     font-size: 18px;
     color: var(--white);
+    @include sm {
+      display: none;
+    }
+  }
+  &__nav {
+    @include xl {
+      order: 4;
+    }
   }
 }
 
 .menu {
   display: flex;
   gap: 40px;
+  @include xxl {
+    gap: 20px;
+  }
   &__link {
     color: var(--white);
     font-size: 18px;
@@ -47,7 +48,7 @@
   @include xl {
     gap: 20px;
   }
-  @include lg {
+  @include xl {
     flex-direction: column;
     position: absolute;
     gap: 16px;
@@ -58,6 +59,7 @@
       display: flex;
       width: 100%;
       left: 0;
+      top: 60px;
       padding-inline-start: 20px;
       background-color: var(--menu-bg-mobile);
       height: 100vh;
@@ -73,7 +75,7 @@
     cursor: pointer;
     display: none;
     background: none;
-    @include lg {
+    @include xl {
       display: block;
       height: 24px;
       width: 30px;
@@ -111,7 +113,6 @@
     }
   }
 }
-
 
 .cart {
   position: relative;

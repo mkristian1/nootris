@@ -1,12 +1,25 @@
+@import'../../../../styles/mixins/index.scss';
+
 .order {
     background-color: var(--black);
     padding: 112px 0;
     color: var(--white);
+    @include md {
+        padding: 40px 0;
+    }
     &__title {
         font-size: 48px;
         font-weight: 700;
         text-align: center;
         margin-bottom: 84px;
+        @include lg {
+            font-size: 38px;
+            margin-bottom: 40px;
+        }
+        @include sm {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
         &_orange {
             color: var(--orange);
             font-weight: 700;
@@ -17,11 +30,19 @@
         gap: 110px;
         justify-content: center;
         text-align: center;
+        @include lg {
+            gap: 32px;
+        }
+        @include md {
+            flex-direction: column;
+        }
     }
     &__item {
         img {
-            min-height: 168px;
             margin-bottom: 70px;
+            @include md {
+                margin-bottom: 20px;
+            }
         }
     }
 }
@@ -33,6 +54,10 @@
     gap: 32px;
     font-size: 48px;
     margin-bottom: 60px;
+    @include md {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
     &_old {
         font-size: 36px;
         color: var(--gray);
@@ -41,11 +66,17 @@
 }
 
 .buy {
+    @include md {
+        order: 3;
+    }
     &__text {
         &_free {
             margin-top: 44px;
             margin-bottom: 8px;
             font-size: 36px;
+            @include md {
+                font-size: 28px;
+            }
         }
         &_special {
             font-size: 24px;

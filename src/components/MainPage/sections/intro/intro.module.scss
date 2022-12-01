@@ -1,4 +1,4 @@
-@import url('../../../../styles/mixins/index.scss');
+@import'../../../../styles/mixins/index.scss';
 
 .intro {
   position: relative;
@@ -7,6 +7,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: calc(96px + 80px) 0 96px;
+  @include sm {
+    padding: calc(40px + 80px) 0 40px;
+    min-height: initial;
+    text-align: center;
+  }
   &__wrap {
     position: relative;
     z-index: 10;
@@ -19,17 +24,30 @@
     margin-bottom: 24px;
     animation-name: fadeInLeft;
     animation-duration: 2s;
-    
+    @include xl {
+      font-size: 70px;
+      line-height: 70px;
+    }
+    @include sm {
+      font-size: 36px;
+      line-height:46px;
+    }
   }
   &__desc {
     font-size: 24px;
     max-width: 672px;
     margin-bottom: 120px;
+    @include sm {
+      margin-bottom: 40px;
+    }
   }
   &__sub-title {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 16px;
+    @include sm {
+      font-size: 28px;
+    }
   }
   &__vitamin {
     position: absolute;
@@ -38,6 +56,13 @@
     transform: translateY(28vh);
     animation-name: fadeIn;
     animation-duration: 2s;
+    @include xl {
+      max-width: 500px;
+      transform: translateY(20vh);
+    }
+    @include sm {
+      display: none;
+    }
   }
 }
 

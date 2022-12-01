@@ -84,12 +84,13 @@
         }
     }
     &__btn {
-        margin-top: 64px;
         background-color: var(--orange);
         width: 256px;
         height: 56px;
+        margin-top: 64px;
         border-radius: 7px;
         font-size: 17px;
+        color: var(--black);
         transition: background-color 0.3s;
         &:hover {
             background-color: var(--white);
